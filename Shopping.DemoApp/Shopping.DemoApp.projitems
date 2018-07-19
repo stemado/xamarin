@@ -15,7 +15,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\RatingText.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\RatingMsgHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SaleItem.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\EmotionService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\SaleItemDataService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticationService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ImagesFileSyncHandler.cs" />

@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
@@ -85,7 +85,6 @@
   },
   "variables": {
     "hostingPlanName": "[concat('Xamarin-Azure-Demo-Service-Plan', uniqueString(resourceGroup().id))]",
-    "emotionServiceName": "[concat('Xamarin-Azure-Demo-Service-Emotion', uniqueString(resourceGroup().id))]",
     "sqlServerName": "[concat('xamarin-azure-demo-service-sql', uniqueString(resourceGroup().id))]",
     "mobileSiteName": "[concat('Xamarin-Azure-Demo-Service-Mobile', uniqueString(resourceGroup().id))]",
     "diagnosticsName": "[concat('Xamarin-Azure-Demo-Service-Diagnostics', uniqueString(resourceGroup().id))]",
@@ -94,19 +93,6 @@
     "storageAccountName": "[concat('xamarindemo', uniqueString(resourceGroup().id))]"
   },
   "resources": [
-    {
-      "name": "[variables('emotionServiceName')]",
-      "type": "Microsoft.CognitiveServices/accounts",
-      "sku": {
-        "name": "S0"
-      },
-      "kind": "Emotion",
-      "apiVersion": "2016-02-01-preview",
-      "location": "westus",
-      "properties": {
-        "endpoint": "https://api.projectoxford.ai/emotion/v1.0"
-      }
-    },
     {
       "type": "Microsoft.Sql/servers",
       "apiVersion": "2014-04-01-preview",
